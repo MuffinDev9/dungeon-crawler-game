@@ -34,11 +34,13 @@ game.onUpdate(function controlthing() {
     
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function on_a_pressed() {
-    let projectile: Sprite;
+    let srowd: Sprite;
     if (blockMenu.isMenuOpen()) {
         menuthings()
     } else if (buttonpressed == 0) {
-        projectile = sprites.createProjectileFromSprite(assets.image`swardright`, my_sprite, 100, 0)
+        srowd = sprites.createProjectileFromSprite(assets.image`swardright`, my_sprite, 100, 0)
+    } else if (buttonpressed == 1) {
+        srowd = sprites.createProjectileFromSprite(assets.image`swardleft`, my_sprite, 100, 0)
     }
     
 })

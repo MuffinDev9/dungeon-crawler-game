@@ -37,8 +37,9 @@ def on_a_pressed():
         menuthings()
     else:
         if buttonpressed == 0:
-            projectile = sprites.create_projectile_from_sprite(assets.image("""swardright"""), my_sprite, 100, 0)
-            
+            srowd = sprites.create_projectile_from_sprite(assets.image("""swardright"""), my_sprite, 100, 0)
+        elif buttonpressed == 1:
+            srowd = sprites.create_projectile_from_sprite(assets.image("""swardleft"""), my_sprite, 100, 0)
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_up_pressed():
